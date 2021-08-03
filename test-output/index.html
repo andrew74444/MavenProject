@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-Suite">
+              <span class="suite-name border-passed">Suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-Suite">
+                    <span>D:\workspace\MavenProject\testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-Suite">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-Suite">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-Suite">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-Suite">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Suite">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-Suite">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">1 method,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Suite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.ProjectName.ModuleName.TestScripts.TC001_Verify_User_Able_Login_Successfully" hash-for-method="TC001({additionalDetails=Event Management Prefered , communityName=Community 1 -, jobTypeID=Contract, rema...)">TC001({additionalDetails=Event Management Prefered , communityName=Community 1 -, jobTypeID=Contract, rema...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.ProjectName.ModuleName.TestScripts.TC001_Verify_User_Able_Login_Successfully</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC001({additionalDetails=Event Management Prefered , communityName=Community 1 -, jobTypeID=Contract, rema...)">
+                  </a> <!-- TC001({additionalDetails=Event Management Prefered , communityName=Community 1 -, jobTypeID=Contract, rema...) -->
+                  <span class="method-name">TC001</span>
+                  <span class="parameters">({additionalDetails=Event Management Prefered , communityName=Community 1 -, jobTypeID=Contract, remarks=immediate joining required, makeGlobal=Yes, browser=chrome, OtherName=Other Name, planName=All plans, email2=curatora99@gmail.com, About=Please check back soon, email1=connectproemqa@gmail.com, resume=\src\test\resources\testImages\Files\ChromePDF1.pdf, name=Silver, description=As a Business Analyst, you will be –
+
+· Working closely with internal, external stakeholders and end users to understand their business objectives and processes.
+
+· Leading the requirement collection activities including creating workshop and interview schedules and agenda.
+
+· Facilitating requirement gathering workshops and interviews to identify, translate and document business and user needs into detailed, testable and verifiable business, functional and system requirement specifications
+
+· Facilitating communications between solution architects, developers, quality assurance analysts and business users as required throughout the requirement analysis, design and testing phases to ensure the defined requirements are interpreted correctly
+
+· Draft the functional requirements documents as use cases or user stories. Create mock up screens wherever required.
+
+· Coordinating with UI designer to ensure the UI design is in-line with the requirements at hand.
+
+· Creating and maintaining project deliverables as defined by the Project Development methodology, be it SDLC or Agile.
+
+· Working closely with the Solutions practice project manager(s) and delivery manager to help defining project scope. Working closely with the quality assurance lead and the business users during system testing and user acceptance testing to ensure that requirements are thoroughly tested and if necessary assist with executing test cases.
+
+· Participating in the creation of end user and system training plans and documentation, facilitate training sessions
+
+· Collaborating with the Solutions team on new business proposals and projects which may require the collection, analysis and documentation of information and/or data
+
+Skills & Qualifications
+
+· 3 - 5 years of experience as a Business Analyst
+
+· Experience with formal project management methodologies, best practices, system development life-cycle and product development life-cycle
+
+· Experience working with off-shore development and testing teams
+
+· Experience with translating business and user needs into detailed, testable and verifiable business, functional and system requirement specifications preferably for web based applications
+
+· Experience with documenting specifications for business intelligence or information technology reports, dashboards
+
+· Experience with business process design techniques
+
+· Experience with Microsoft office suite of products
+
+· Must possess strong interpersonal, communication and presentation skills
+
+· Must be capable of gaining client and end user confidence and trust
+
+· Awareness and understanding of web technology architectures and web user interface design techniques
+
+· Must be willing to occasionally work additional hours to support the needs of the business
+
+· Must be capable of maintaining a high level of productivity in a dynamic and fast paced environment
+
+· Bachelor’s degree in Information Sciences, Information Technologies, Business Science, and Computer Science preferred
+
+· IIBA, PMP or six sigma certification a plus
+
+· Applicants must be able to provide samples of documentation they have authored., BuildingRelationship=Building Relationship, Branding=Branding, groupDescription=Please check back soon...., location=Madhapur, Hyderabad, city=Hyderabad, durationType=Day(s), billingRate=$20-$25, Networking=Networking, email=andrew74444@gmail.com, duration=1, jobTitle=Business Analyst, paymentMethod=authorize, logoImagePath=\src\test\resources\testImages\ExeFiles\ChromeImage4.exe, price=10, password=Admin@123, paymentGateway=authorize, membershipPlan=Advertisements, groupType=Public, Category=Learning, Runmode=Y, optionalMessage=Ready to join in 5 days, InvestInBusiness=InvestIn Business, Marketing=Marketing, groupCategory=Music, membershipPlanDescription=SheTek is addressing the need to increase the percentage of women represented in the technology industry. Our SheTek Community supports a pipeline of talent that is highly skilled and job ready. This unique community is powered through partnerships and collaborations to provide training, mentorship, and internships that lead to job placements through SheTek Staffing Services. We also empower women entrepreneurs through our technology offerings by giving them access to solutions and CTO services that help them grow their business., Other=no other, Test Descrption=TC001_Purchase_Pricing_Plan_With_PayPal, GrowMyBusiness=Grow My Business, groupName=Public Group 1, state=Telangana, type=Public})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+        </div> <!-- panel Suite -->
+        <div panel-name="test-xml-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">D:\workspace\MavenProject\testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
+  &lt;test name=&quot;Test1&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.ProjectName.ModuleName.TestScripts.TC001_Verify_User_Able_Login_Successfully&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Test1 --&gt;
+&lt;/suite&gt; &lt;!-- Suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Test1 (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Suite');
+function tableData_Suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(1);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'TC001')
+data.setCell(0, 2, 'com.ProjectName.ModuleName.TestScripts.TC001_Verify_User_Able_Login_Successfully')
+data.setCell(0, 3, 39491);
+window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 39 seconds</span>
+              <div id="times-div-Suite">
+              </div> <!-- times-div-Suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.ProjectName.ModuleName.TestScripts.TC001_Verify_User_Able_Login_Successfully</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">setUpFramework</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+              <div class="test-method">
+                <span class="method-name">TC001({additionalDetails=Event Management Prefered , communityName=Community 1 -, jobTypeID=Contract, rema...)</span>
+                <span class="method-start">2501 ms</span>
+              </div> <!-- test-method -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

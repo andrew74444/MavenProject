@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+<listeners>
+<listener class-name="uitility.Listener"></listener>
+
+</listeners>
+
+	<test name="Test">
+	<parameter name="email" value="test1@gmail.com"></parameter>
+	<parameter name="pwd" value="test@123"></parameter>
+	
+	
+
+		<classes>
+			<class name="Parameterization.ParameterizationWithTestNgXML"></class>
+		</classes>
+
+
+	</test> <!-- Test -->
+
+	
+</suite> <!-- Suite -->
