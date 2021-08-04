@@ -6,7 +6,7 @@
       <class name="com.ProjectName.ModuleName.TestScripts.TC001_Verify_User_Able_Login_Successfully">
         <methods>
           <include name="setUpFramework"/>
-          <include name="TC001"/>
+          <include name="TC001" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.ProjectName.ModuleName.TestScripts.TC001_Verify_User_Able_Login_Successfully -->
     </classes>

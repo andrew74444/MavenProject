@@ -1,11 +1,14 @@
 package com.ProjectName.ModuleName.TestScripts;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -14,6 +17,7 @@ import org.testng.annotations.BeforeSuite;
 import com.ProjectName.utilities.DriverFactory;
 import com.ProjectName.utilities.DriverManager;
 
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 
@@ -21,6 +25,7 @@ public class BaseTest {
 
 	private FileInputStream fis;
 	private Properties Config = new Properties();
+	public Logger log = Logger.getLogger(BaseTest.class);
 	private WebDriver driver;
 	private String defaultUserName;
 	private String defaultPassword;
@@ -56,7 +61,7 @@ public class BaseTest {
 	
 	@BeforeSuite
 	public void setUpFramework() {
-
+		configureLogging();
 		DriverFactory.setConfigPropertyFilePath(System.getProperty("user.dir")+"\\src\\test\\resources\\properties\\Config.properties");
 
 		/*
@@ -73,15 +78,19 @@ public class BaseTest {
 			e.printStackTrace();
 		}
 		try {
-			Config.load(fis);
-			// log.info("Config properties file loaded");
+			Config.load(fis);			
+			 log.info("Config properties file loaded");
 		} catch (IOException e) {
 
 			e.printStackTrace();
 		}
 	}
 
-
+	public void configureLogging() {
+		String log4jConfigFile = System.getProperty("user.dir") + File.separator + "src/test/resources/properties"
+				+ File.separator + "log4j.properties";
+		PropertyConfigurator.configure(log4jConfigFile);
+	}
 	
 	
 	public void openBrowser(String browser) throws InterruptedException {	
@@ -97,7 +106,7 @@ public class BaseTest {
 
 		}		
 		DriverManager.setWebDriver(driver);
-//		log.info("Driver Initialized !!!");
+		log.info("Driver Initialized !!!");
 		DriverManager.getDriver().manage().window().maximize();
 		DriverManager.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			

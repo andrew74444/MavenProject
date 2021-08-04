@@ -17,8 +17,10 @@ public class HomePage extends BasePage{
 	
 	
 	public LoginPage Search() {
-		searchField.sendKeys("Selenium Training");
-		signInButton.click();
+		
+		type(searchField, "search Field", "Selenium Training");
+		click(signInButton,"sign In Button");
+		
 		return (LoginPage) openPage(LoginPage.class);
 	}
 	
