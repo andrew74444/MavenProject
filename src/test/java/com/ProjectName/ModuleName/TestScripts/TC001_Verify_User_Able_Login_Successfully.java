@@ -2,6 +2,7 @@ package com.ProjectName.ModuleName.TestScripts;
 
 import java.util.Hashtable;
 
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
 import com.ProjectName.Pages.HomePage;
@@ -27,4 +28,12 @@ public class TC001_Verify_User_Able_Login_Successfully extends BaseTest{
 	
 	}
 	
+	@AfterMethod
+	public void tearDown() {
+		
+		logInfo("Login Test Completed");
+		
+		quit();
+		
+	}
 }

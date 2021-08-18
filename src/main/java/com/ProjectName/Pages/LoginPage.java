@@ -7,7 +7,7 @@ public class LoginPage {
 	
 	
 	
-	@FindBy(xpath = "//*[@name='q']")
+	@FindBy(xpath = "//*[@name='identifier']")
 	WebElement email;
 	
 	@FindBy(xpath="//a[text()='Sign in']")
@@ -17,7 +17,7 @@ public class LoginPage {
 	
 	public void sign() {
 		email.sendKeys("test@gmail.com");
-		pwd.sendKeys("password");
+//		pwd.sendKeys("password");
 		
 		
 	}

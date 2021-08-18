@@ -7,22 +7,20 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 
+import com.ProjectName.ExtentListeners.ExtentListeners;
 import com.ProjectName.utilities.DriverManager;
 
-
-
-
 public class BasePage<T> {
-	
+
 	protected WebDriver driver;
 	private int AJAX_ELEMENT_TIMEOUT = 150;
 	public Logger log = Logger.getLogger(BasePage.class);
-	
+
 	public BasePage() {
 		this.driver = DriverManager.getDriver();
 
 	}
-	
+
 	public T openPage(Class<T> clazz) {
 		T page = null;
 		try {
@@ -30,9 +28,10 @@ public class BasePage<T> {
 			AjaxElementLocatorFactory ajaxElemFactory = new AjaxElementLocatorFactory(driver, AJAX_ELEMENT_TIMEOUT);
 			page = PageFactory.initElements(driver, clazz);
 			PageFactory.initElements(ajaxElemFactory, page);
-//			ExpectedCondition pageLoadCondition = ((BasePage) page).getPageLoadCondition();
-//			waitForPageToLoad(pageLoadCondition);
-//			((BasePage) page).getPageScreenSot();
+			// ExpectedCondition pageLoadCondition = ((BasePage)
+			// page).getPageLoadCondition();
+			// waitForPageToLoad(pageLoadCondition);
+			// ((BasePage) page).getPageScreenSot();
 		} catch (NoSuchElementException e) {
 			/*
 			 * String error_screenshot = System.getProperty("user.dir") +
@@ -42,27 +41,25 @@ public class BasePage<T> {
 		}
 		return page;
 	}
-	
-	
-	
-	public void click(WebElement element,String elementName) {
-		
-		log.info("Clicking on "+elementName);
+
+	public void click(WebElement element, String elementName) {
+
+		ExtentListeners.testReport.get().info("Clicking on : " + elementName);
+		log.info("Clicking on " + elementName);
 		element.click();
-		log.info("Clicked on "+elementName);
-		
+		log.info("Clicked on " + elementName);
+		ExtentListeners.testReport.get().info("Clickied on : " + elementName);
+
 	}
-	
-public void type(WebElement element,String elementName, String value) {
-	log.info("Text entering in "+elementName+ " and the value is "+value);
-		element.sendKeys(value);;
-		log.info("Text entered in "+elementName+ " and the value is "+value);
+
+	public void type(WebElement element, String elementName, String value) {
 		
+		ExtentListeners.testReport.get().info("Entering text "+value+" in : " + elementName);
+		log.info("Text entering in " + elementName + " and the value is " + value);
+		element.sendKeys(value);
+		log.info("Text entered in " + elementName + " and the value is " + value);
+		ExtentListeners.testReport.get().info("Entered text "+ value +" in : " + elementName);
+
 	}
-	
-	
-	
-	
-	
 
 }

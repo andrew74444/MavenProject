@@ -14,9 +14,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.BeforeSuite;
 
+import com.ProjectName.ExtentListeners.ExtentListeners;
 import com.ProjectName.utilities.DriverFactory;
 import com.ProjectName.utilities.DriverManager;
-
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -93,6 +93,12 @@ public class BaseTest {
 	}
 	
 	
+	public void logInfo(String message) {
+
+		ExtentListeners.testReport.get().info(message);
+	}
+	
+	
 	public void openBrowser(String browser) throws InterruptedException {	
 
 		if (browser.equals("chrome")) {
@@ -119,7 +125,11 @@ public class BaseTest {
 	
 	
 	
-	
+	public void quit() {
+
+		DriverManager.getDriver().quit();
+		log.info("Test Execution Completed !!!");
+	}
 	
 	
 	
