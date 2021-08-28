@@ -36,6 +36,10 @@ public class RegisterPage extends BasePage {
 	WebElement clickMe;
 	
 	
+	@FindBy(xpath = "//iframe[@id='iframeResult']")
+	WebElement iframeResult;
+	
+	
 	public RegisterPage open(String url) {
 
 		DriverManager.getDriver().navigate().to(url);
@@ -97,7 +101,14 @@ public class RegisterPage extends BasePage {
 	
 	
 	public void m3() {
+		
+		System.out.println(driver.findElements(By.xpath("//iframe")).size());
+		switchTOIframeByElement(iframeResult);
 		click(clickMe, "click Me");
+		
+		switchTodefaultContent();
+		
+		
 	}
 	
 	

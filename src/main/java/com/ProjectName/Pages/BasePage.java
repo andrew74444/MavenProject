@@ -213,17 +213,25 @@ public class BasePage<T> {
 
 	}
 
-	public void switchTOIframeByID() {
-//		driver.switchTo().
+	public void switchToIframeByIndex(int x) {
+		driver.switchTo().frame(0);
 
 	}
 
-	public void switchTOIframeByName() {
+	public void switchTOIframeByName(String name) {
 
+		driver.switchTo().frame(name);
+		
 	}
+	
+	public void switchTodefaultContent() {
+		DriverManager.getDriver().switchTo().defaultContent();
+	}
+	
+	
 
-	public void switchTOIframeByXpath() {
-
+	public void switchTOIframeByElement(WebElement element) {
+		driver.switchTo().frame(element);
 	}
 
 }
