@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="75904" started-at="2021-08-18T04:51:15Z" finished-at="2021-08-18T04:52:31Z">
+  <suite name="Suite" duration-ms="41894" started-at="2021-08-27T04:48:40Z" finished-at="2021-08-27T04:49:22Z">
     <groups>
     </groups>
-    <test name="Test1" duration-ms="75904" started-at="2021-08-18T04:51:15Z" finished-at="2021-08-18T04:52:31Z">
-      <class name="com.ProjectName.ModuleName.TestScripts.TC001_Verify_User_Able_Login_Successfully">
-        <test-method status="PASS" signature="setUpFramework()[pri:0, instance:com.ProjectName.ModuleName.TestScripts.TC001_Verify_User_Able_Login_Successfully@7e9a5fbe]" name="setUpFramework" is-config="true" duration-ms="71" started-at="2021-08-18T10:21:15Z" finished-at="2021-08-18T10:21:15Z">
+    <test name="Test1" duration-ms="41894" started-at="2021-08-27T04:48:40Z" finished-at="2021-08-27T04:49:22Z">
+      <class name="com.ProjectName.ModuleName.TestScripts.TC004_Verify_User_Able_To_Select_DropDown">
+        <test-method status="PASS" signature="setUpFramework()[pri:0, instance:com.ProjectName.ModuleName.TestScripts.TC004_Verify_User_Able_To_Select_DropDown@7e9a5fbe]" name="setUpFramework" is-config="true" duration-ms="152" started-at="2021-08-27T10:18:40Z" finished-at="2021-08-27T10:18:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpFramework -->
-        <test-method status="PASS" signature="TC001(java.util.Hashtable)[pri:0, instance:com.ProjectName.ModuleName.TestScripts.TC001_Verify_User_Able_Login_Successfully@7e9a5fbe]" name="TC001" duration-ms="68727" started-at="2021-08-18T10:21:18Z" data-provider="masterDP" finished-at="2021-08-18T10:22:27Z">
+        <test-method status="PASS" signature="TC001(java.util.Hashtable)[pri:0, instance:com.ProjectName.ModuleName.TestScripts.TC004_Verify_User_Able_To_Select_DropDown@7e9a5fbe]" name="TC001" duration-ms="40364" started-at="2021-08-27T10:18:42Z" data-provider="masterDP" finished-at="2021-08-27T10:19:22Z">
           <params>
             <param index="0">
               <value>
@@ -22,11 +22,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC001 -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ProjectName.ModuleName.TestScripts.TC001_Verify_User_Able_Login_Successfully@7e9a5fbe]" name="tearDown" is-config="true" duration-ms="4139" started-at="2021-08-18T10:22:27Z" finished-at="2021-08-18T10:22:31Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ProjectName.ModuleName.TestScripts.TC004_Verify_User_Able_To_Select_DropDown@7e9a5fbe]" name="tearDown" is-config="true" duration-ms="1" started-at="2021-08-27T10:19:22Z" finished-at="2021-08-27T10:19:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.ProjectName.ModuleName.TestScripts.TC001_Verify_User_Able_Login_Successfully -->
+      </class> <!-- com.ProjectName.ModuleName.TestScripts.TC004_Verify_User_Able_To_Select_DropDown -->
     </test> <!-- Test1 -->
   </suite> <!-- Suite -->
 </testng-results>

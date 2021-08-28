@@ -9,6 +9,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -17,6 +18,7 @@ import org.testng.annotations.BeforeSuite;
 import com.ProjectName.ExtentListeners.ExtentListeners;
 import com.ProjectName.utilities.DriverFactory;
 import com.ProjectName.utilities.DriverManager;
+import com.ProjectName.utilities.JavaScript;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -117,7 +119,8 @@ public class BaseTest {
 		DriverManager.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			
 		setTestsiteUrl(Config.getProperty("testsiteurl"));
-		
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		JavaScript.setJavaScriptObject(js);
 
 		
 		

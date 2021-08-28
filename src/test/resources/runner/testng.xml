@@ -13,7 +13,7 @@
   <test  name="Test1">
 
   <classes>
-  <class name="com.ProjectName.ModuleName.TestScripts.TC001_Verify_User_Able_Login_Successfully"/>
+  <class name="com.ProjectName.ModuleName.TestScripts.TC004_Verify_User_Able_To_Select_DropDown"/>
   </classes>  
   
   </test> <!-- Test -->

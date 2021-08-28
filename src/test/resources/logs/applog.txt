@@ -1,9 +1,5 @@
-INFO    2021-08-18 10:21:15,381 [main] com.ProjectName.ModuleName.TestScripts.BaseTest  - Config properties file loaded
-INFO    2021-08-18 10:21:45,476 [main] io.github.bonigarcia.wdm.WebDriverManager  - Using chromedriver 92.0.4515.107 (since Google Chrome 92 is installed in your machine)
-INFO    2021-08-18 10:21:45,865 [main] io.github.bonigarcia.wdm.WebDriverManager  - Exporting webdriver.chrome.driver as C:\Users\Sasi\.m2\repository\webdriver\chromedriver\win32\92.0.4515.107\chromedriver.exe
-INFO    2021-08-18 10:22:17,162 [main] com.ProjectName.ModuleName.TestScripts.BaseTest  - Driver Initialized !!!
-INFO    2021-08-18 10:22:21,840 [main] com.ProjectName.Pages.BasePage  - Text entering in search Field and the value is Selenium Training
-INFO    2021-08-18 10:22:22,192 [main] com.ProjectName.Pages.BasePage  - Text entered in search Field and the value is Selenium Training
-INFO    2021-08-18 10:22:22,193 [main] com.ProjectName.Pages.BasePage  - Clicking on sign In Button
-INFO    2021-08-18 10:22:26,401 [main] com.ProjectName.Pages.BasePage  - Clicked on sign In Button
-INFO    2021-08-18 10:22:31,285 [main] com.ProjectName.ModuleName.TestScripts.BaseTest  - Test Execution Completed !!!
+INFO    2021-08-28 09:35:03,013 [main] com.ProjectName.ModuleName.TestScripts.BaseTest  - Config properties file loaded
+INFO    2021-08-28 09:36:06,337 [main] io.github.bonigarcia.wdm.WebDriverManager  - Using chromedriver 92.0.4515.107 (since Google Chrome 92 is installed in your machine)
+INFO    2021-08-28 09:36:06,847 [main] io.github.bonigarcia.wdm.WebDriverManager  - Exporting webdriver.chrome.driver as C:\Users\Sasi\.m2\repository\webdriver\chromedriver\win32\92.0.4515.107\chromedriver.exe
+INFO    2021-08-28 09:37:02,093 [main] com.ProjectName.ModuleName.TestScripts.BaseTest  - Driver Initialized !!!
+INFO    2021-08-28 09:37:17,940 [main] com.ProjectName.Pages.BasePage  - Clicking on click Me
