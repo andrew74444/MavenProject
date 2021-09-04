@@ -46,7 +46,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Sep 4, 2021 09:57:28 AM</span>
+                    <span class='label suite-start-time blue darken-3'>Sep 4, 2021 10:52:54 AM</span>
 				</a>
 			</li>
 			<li>
@@ -72,6 +72,7 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -122,10 +123,10 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> test(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> test(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -137,10 +138,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='16.667%'><span class='strong'>1</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='83.333%'>5</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='66.667%'>2</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='33.333%'>1</span> others
 				</div>
 			</div>
 		</div>
@@ -155,17 +156,17 @@
 			<ul id='test-collection' class='test-collection'>
 				
 				
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>com.ProjectName.ModuleName.TestScripts.TC004_Verify_User_Able_To_Select_DropDown</span>
-						<span class='test-time'>Sep 4, 2021 09:57:46 AM</span>
-						<span class='test-status right pass'>pass</span>
+						<span class='test-time'>Sep 4, 2021 10:52:58 AM</span>
+						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Sep 4, 2021 09:57:46 AM</span>
-	<span class='label end-time'>Sep 4, 2021 09:59:21 AM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 1m 35s+325ms</span>
+	<span class='label start-time'>Sep 4, 2021 10:52:58 AM</span>
+	<span class='label end-time'>Sep 4, 2021 10:58:59 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 6m 0s+662ms</span>
 </div>
 	<div class='test-steps'>
 		<table class='bordered table-results'>
@@ -177,34 +178,19 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>9:59:11 AM</td>
-					<td class='step-details'><b><font color=yellow>Screenshot of new Page Navigation</font></b><img data-featherlight='Sat_Sep_04_09_59_10_IST_2021.jpg' width='10%' src='Sat_Sep_04_09_59_10_IST_2021.jpg' data-src='Sat_Sep_04_09_59_10_IST_2021.jpg'></td>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>10:58:57 AM</td>
+					<td class='step-details'><details><summary><b><font color=red>Exception Occured:Click to see</font></b ></summary>[sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br> sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)<br> sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)<br> java.lang.reflect.Constructor.newInstance(Constructor.java:423)<br> org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)<br> org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)<br> org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)<br> org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)<br> org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)<br> org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)<br> org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)<br> org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:295)<br> com.ProjectName.ExtentListeners.ExtentManager.captureScreenshot(ExtentManager.java:81)<br> com.ProjectName.Pages.RegisterPage.m5(RegisterPage.java:114)<br> com.ProjectName.ModuleName.TestScripts.TC004_Verify_User_Able_To_Select_DropDown.TC001(TC004_Verify_User_Able_To_Select_DropDown.java:26)<br> sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br> sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br> sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br> java.lang.reflect.Method.invoke(Method.java:498)<br> org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)<br> org.testng.internal.Invoker.invokeMethod(Invoker.java:661)<br> org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)<br> org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)<br> org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)<br> org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)<br> org.testng.TestRunner.privateRun(TestRunner.java:744)<br> org.testng.TestRunner.run(TestRunner.java:602)<br> org.testng.SuiteRunner.runTest(SuiteRunner.java:380)<br> org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)<br> org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)<br> org.testng.SuiteRunner.run(SuiteRunner.java:289)<br> org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br> org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br> org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)<br> org.testng.TestNG.runSuitesLocally(TestNG.java:1226)<br> org.testng.TestNG.runSuites(TestNG.java:1144)<br> org.testng.TestNG.run(TestNG.java:1115)<br> org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)<br> org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)<br> org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)]</details></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>10:58:59 AM</td>
+					<td class='step-details'><span class='label white-text red'>TEST CASE FAILED</span></td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>9:59:11 AM</td>
-					<td class='step-details'><b><font color=White>Screenshot of new Page Navigation</font></b><img data-featherlight='Sat_Sep_04_09_59_11_IST_2021.jpg' width='10%' src='Sat_Sep_04_09_59_11_IST_2021.jpg' data-src='Sat_Sep_04_09_59_11_IST_2021.jpg'></td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>9:59:16 AM</td>
-					<td class='step-details'>Clicking on : try It</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>9:59:18 AM</td>
-					<td class='step-details'>Clickied on : try It</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>9:59:21 AM</td>
-					<td class='step-details'><span class='label white-text green'><b>TEST CASE:- TC001 PASSED</b></span></td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>9:59:21 AM</td>
+					<td class='timestamp'>10:58:59 AM</td>
 					<td class='step-details'>Login Test Completed</td>
 				</tr>
 			</tbody>
@@ -253,25 +239,25 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>6</div>
+					<div class='panel-lead'>3</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Sep 4, 2021 09:57:28 AM</div>
+					<div class='panel-lead'>Sep 4, 2021 10:52:54 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Sep 4, 2021 09:59:22 AM</div>
+			 		<div class='panel-lead'>Sep 4, 2021 10:59:10 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 1m 54s+290ms</div>
+					<div class='panel-lead'>0h 6m 15s+786ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -312,22 +298,22 @@
 
 		<script>
 			var statusGroup = {
-				passParent: 1,
-				failParent: 0,
+				passParent: 0,
+				failParent: 1,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 0,
+				exceptionsParent: 1,
 				
-				passChild: 1,
-				failChild: 0,
+				passChild: 0,
+				failChild: 2,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
-				infoChild: 5,
-				exceptionsChild: 0,
+				infoChild: 1,
+				exceptionsChild: 2,
 				
 				passGrandChild: 0,
 				failGrandChild: 0,

@@ -1,5 +1,6 @@
 package com.ProjectName.Pages;
 
+import java.awt.Robot;
 import java.io.File;
 import java.io.IOException;
 import java.util.Date;
@@ -19,9 +20,9 @@ import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import com.ProjectName.ExtentListeners.ExtentListeners;
-import com.ProjectName.ExtentListeners.ExtentManager;
 import com.ProjectName.utilities.DriverManager;
 import com.ProjectName.utilities.JavaScript;
+import com.ProjectName.utilities.RobotClass;
 import com.aventstack.extentreports.MediaEntityBuilder;
 
 import ru.yandex.qatools.ashot.AShot;
@@ -34,10 +35,15 @@ public abstract class BasePage<T> {
 	private int AJAX_ELEMENT_TIMEOUT = 150;
 	public Logger log = Logger.getLogger(BasePage.class);
 	protected JavascriptExecutor exe;
-
+	protected Robot robot;
+	
+	
 	public BasePage() {
 		this.driver = DriverManager.getDriver();
 		this.exe = JavaScript.getJavaScriptObject();
+		
+		this.robot = RobotClass.getRobotClassObject();
+		
 	}
 
 	public T openPage(Class<T> clazz) {
@@ -62,6 +68,9 @@ public abstract class BasePage<T> {
 	}
 
 	protected abstract void getPageScreenSot();
+	
+	
+	
 	public String screenshotName;
 	
 	public void aShot() {
@@ -97,7 +106,7 @@ public abstract class BasePage<T> {
 				}
 
 				scrollUpVertically();
-				ExtentManager.captureScreenshot();
+				
 				try {
 					Thread.sleep(2000);
 				} catch (InterruptedException e) {

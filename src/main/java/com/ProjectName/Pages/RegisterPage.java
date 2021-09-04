@@ -1,10 +1,13 @@
 package com.ProjectName.Pages;
 
+import java.awt.event.KeyEvent;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import com.ProjectName.ExtentListeners.ExtentManager;
 import com.ProjectName.utilities.DriverManager;
 
 public class RegisterPage extends BasePage {
@@ -51,7 +54,11 @@ public class RegisterPage extends BasePage {
 	@Override
 	protected void getPageScreenSot() {
 		aShot();
-	}	
+	}
+	
+	
+	
+	
 	public void m1() throws InterruptedException {
 		selectByVisibleText(skills, "Adobe Photoshop", "skills");		
 		Thread.sleep(1000);		
@@ -92,14 +99,22 @@ public class RegisterPage extends BasePage {
 		System.out.println(driver.findElements(By.xpath("//iframe")).size());
 		switchTOIframeByElement(iframeResult);
 		click(tryIt, "try It");
-		
+		ExtentManager.captureScreenshot();
 		Thread.sleep(3000);
 		getAlertText();
 		getAlert();
 //		switchTodefaultContent();		
 	}
 	
-	
+	public void m5() throws InterruptedException {		
+		
+		
+		
+		 robot.keyPress(KeyEvent.VK_END);
+		ExtentManager.captureScreenshot();
+		Thread.sleep(3000);
+		
+	}
 	
 	
 }

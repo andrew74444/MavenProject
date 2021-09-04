@@ -1,5 +1,7 @@
 package com.ProjectName.ModuleName.TestScripts;
 
+import java.awt.AWTException;
+import java.awt.Robot;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -19,6 +21,7 @@ import com.ProjectName.ExtentListeners.ExtentListeners;
 import com.ProjectName.utilities.DriverFactory;
 import com.ProjectName.utilities.DriverManager;
 import com.ProjectName.utilities.JavaScript;
+import com.ProjectName.utilities.RobotClass;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -122,7 +125,13 @@ public class BaseTest {
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		JavaScript.setJavaScriptObject(js);
 
-		
+		try {
+			Robot robot = new Robot();
+			RobotClass.setRobotClassObject(robot);
+		} catch (AWTException e) {
+
+			e.printStackTrace();
+		}
 		
 	}
 	
