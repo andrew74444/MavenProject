@@ -1,6 +1,9 @@
-INFO    2021-08-28 10:34:28,178 [main] com.ProjectName.ModuleName.TestScripts.BaseTest  - Config properties file loaded
-INFO    2021-08-28 10:34:39,914 [main] io.github.bonigarcia.wdm.WebDriverManager  - Using chromedriver 92.0.4515.107 (since Google Chrome 92 is installed in your machine)
-INFO    2021-08-28 10:34:40,049 [main] io.github.bonigarcia.wdm.WebDriverManager  - Exporting webdriver.chrome.driver as C:\Users\Sasi\.m2\repository\webdriver\chromedriver\win32\92.0.4515.107\chromedriver.exe
-INFO    2021-08-28 10:34:58,768 [main] com.ProjectName.ModuleName.TestScripts.BaseTest  - Driver Initialized !!!
-INFO    2021-08-28 10:35:07,090 [main] com.ProjectName.Pages.BasePage  - Clicking on click Me
-INFO    2021-08-28 10:35:09,389 [main] com.ProjectName.Pages.BasePage  - Clicked on click Me
+INFO    2021-09-04 09:57:33,537 [main] com.ProjectName.ModuleName.TestScripts.BaseTest  - Config properties file loaded
+INFO    2021-09-04 09:57:55,740 [main] io.github.bonigarcia.wdm.WebDriverManager  - Using chromedriver 92.0.4515.107 (since Google Chrome 92 is installed in your machine)
+INFO    2021-09-04 09:57:56,036 [main] io.github.bonigarcia.wdm.WebDriverManager  - Exporting webdriver.chrome.driver as C:\Users\Sasi\.m2\repository\webdriver\chromedriver\win32\92.0.4515.107\chromedriver.exe
+INFO    2021-09-04 09:58:12,647 [main] com.ProjectName.ModuleName.TestScripts.BaseTest  - Driver Initialized !!!
+INFO    2021-09-04 09:59:11,295 [main] com.ProjectName.Pages.BasePage  - scrolling up vertically...
+INFO    2021-09-04 09:59:16,962 [main] com.ProjectName.Pages.BasePage  - Clicking on try It
+INFO    2021-09-04 09:59:18,682 [main] com.ProjectName.Pages.BasePage  - Clicked on try It
+INFO    2021-09-04 09:59:21,697 [main] com.ProjectName.Pages.BasePage  - alert test: Hello! I am an alert box!
+INFO    2021-09-04 09:59:21,706 [main] com.ProjectName.Pages.BasePage  - alert text: Hello! I am an alert box!

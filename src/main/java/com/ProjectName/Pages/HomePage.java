@@ -31,6 +31,11 @@ public class HomePage extends BasePage{
 		return (HomePage) openPage(HomePage.class);
 	}
 
+	@Override
+	protected void getPageScreenSot() {
+		aShot();
+	}
+
 	
 	
 }

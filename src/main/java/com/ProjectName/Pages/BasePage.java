@@ -1,7 +1,15 @@
 package com.ProjectName.Pages;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.Date;
+
+import javax.imageio.ImageIO;
+
 import org.apache.log4j.Logger;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,10 +19,16 @@ import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import com.ProjectName.ExtentListeners.ExtentListeners;
+import com.ProjectName.ExtentListeners.ExtentManager;
 import com.ProjectName.utilities.DriverManager;
 import com.ProjectName.utilities.JavaScript;
+import com.aventstack.extentreports.MediaEntityBuilder;
 
-public class BasePage<T> {
+import ru.yandex.qatools.ashot.AShot;
+import ru.yandex.qatools.ashot.Screenshot;
+import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
+
+public abstract class BasePage<T> {
 
 	protected WebDriver driver;
 	private int AJAX_ELEMENT_TIMEOUT = 150;
@@ -36,7 +50,7 @@ public class BasePage<T> {
 			// ExpectedCondition pageLoadCondition = ((BasePage)
 			// page).getPageLoadCondition();
 			// waitForPageToLoad(pageLoadCondition);
-			// ((BasePage) page).getPageScreenSot();
+			 ((BasePage) page).getPageScreenSot();
 		} catch (NoSuchElementException e) {
 			/*
 			 * String error_screenshot = System.getProperty("user.dir") +
@@ -47,6 +61,63 @@ public class BasePage<T> {
 		return page;
 	}
 
+	protected abstract void getPageScreenSot();
+	public String screenshotName;
+	
+	public void aShot() {
+		try {
+			
+
+				Screenshot fpScreenshot;
+
+				fpScreenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000))
+						.takeScreenshot(DriverManager.getDriver());
+
+				Date d = new Date();
+				screenshotName = d.toString().replace(":", "_").replace(" ", "_") + ".jpg";
+				try {
+					ImageIO.write(fpScreenshot.getImage(), "PNG",
+							new File(System.getProperty("user.dir") + "\\reports\\" + screenshotName));
+				} catch (IOException e) {
+
+					e.printStackTrace();
+				}
+				try {
+					ExtentListeners.testReport.get().info(
+							"<b>" + "<font color=" + "yellow>" + "Screenshot of new Page Navigation" + "</font>" + "</b>",
+							MediaEntityBuilder.createScreenCaptureFromPath(screenshotName).build());
+
+					// ExtentListeners.testReport.get().info("<b>" + "<font color=" + "yellow>" +
+					// "Screenshot of new Page Navigation" + "</font>" + "</b>"+"<p>" + "<a
+					// target=\"_blank\" href='" + screenshotName
+					// + "'><img src='" + screenshotName +"'width='10%'/></a>" + "</p>");
+
+				} catch (Exception e) {
+
+				}
+
+				scrollUpVertically();
+				ExtentManager.captureScreenshot();
+				try {
+					Thread.sleep(2000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+
+				try {
+					Thread.sleep(3000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+				
+		} catch (Exception e) {
+					// TODO: handle exception
+				}
+			}
+	
 	public void click(WebElement element, String elementName) {
 
 		ExtentListeners.testReport.get().info("Clicking on : " + elementName);
@@ -112,6 +183,8 @@ public class BasePage<T> {
 		}
 	}
 
+	
+	//https://www.guru99.com/keyboard-mouse-events-files-webdriver.html
 	public void moveToElement(WebElement element) {
 		Actions actions = new Actions(DriverManager.getDriver());
 		actions.moveToElement(element).perform();
@@ -214,7 +287,7 @@ public class BasePage<T> {
 	}
 
 	public void switchToIframeByIndex(int x) {
-		driver.switchTo().frame(0);
+		driver.switchTo().frame(x);
 
 	}
 
@@ -234,4 +307,79 @@ public class BasePage<T> {
 		driver.switchTo().frame(element);
 	}
 
+	
+	
+	
+	
+	// Alerts
+
+		public Alert getAlert() {
+			log.info("alert test: " + DriverManager.getDriver().switchTo().alert().getText());
+			return DriverManager.getDriver().switchTo().alert();
+		}
+
+		public void acceptAlert() {
+			getAlert().accept();
+			log.info("accept Alert is done...");
+		}
+
+		public void dismissAlert() {
+			getAlert().dismiss();
+			log.info("dismiss Alert is done...");
+		}
+
+		public String getAlertText() {
+			String text = getAlert().getText();
+			log.info("alert text: " + text);
+			return text;
+		}
+
+		public boolean isAlertPresent() {
+			try {
+				DriverManager.getDriver().switchTo().alert();
+				log.info("alert is present");
+				return true;
+			} catch (NoAlertPresentException e) {
+				log.info(e.getCause());
+				return false;
+			}
+		}
+
+		public void acceptAlertIfPresent() {
+			if (isAlertPresent()) {
+				acceptAlert();
+			} else {
+				log.info("Alert is not present..");
+			}
+		}
+
+		public void dismissAlertIfPresent() {
+			if (isAlertPresent()) {
+				dismissAlert();
+			} else {
+				log.info("Alert is not present..");
+			}
+		}
+
+		public void acceptPrompt(String text) {
+			if (isAlertPresent()) {
+				Alert alert = getAlert();
+				alert.sendKeys(text);
+				alert.accept();
+				log.info("alert text: " + text);
+			}
+		}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

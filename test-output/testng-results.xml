@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="41257" started-at="2021-08-28T05:04:28Z" finished-at="2021-08-28T05:05:09Z">
+  <suite name="Suite" duration-ms="108056" started-at="2021-09-04T04:27:33Z" finished-at="2021-09-04T04:29:21Z">
     <groups>
     </groups>
-    <test name="Test1" duration-ms="41257" started-at="2021-08-28T05:04:28Z" finished-at="2021-08-28T05:05:09Z">
+    <test name="Test1" duration-ms="108056" started-at="2021-09-04T04:27:33Z" finished-at="2021-09-04T04:29:21Z">
       <class name="com.ProjectName.ModuleName.TestScripts.TC004_Verify_User_Able_To_Select_DropDown">
-        <test-method status="PASS" signature="setUpFramework()[pri:0, instance:com.ProjectName.ModuleName.TestScripts.TC004_Verify_User_Able_To_Select_DropDown@7e9a5fbe]" name="setUpFramework" is-config="true" duration-ms="218" started-at="2021-08-28T10:34:27Z" finished-at="2021-08-28T10:34:28Z">
+        <test-method status="PASS" signature="setUpFramework()[pri:0, instance:com.ProjectName.ModuleName.TestScripts.TC004_Verify_User_Able_To_Select_DropDown@2f8f5f62]" name="setUpFramework" is-config="true" duration-ms="948" started-at="2021-09-04T09:57:32Z" finished-at="2021-09-04T09:57:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpFramework -->
-        <test-method status="PASS" signature="TC001(java.util.Hashtable)[pri:0, instance:com.ProjectName.ModuleName.TestScripts.TC004_Verify_User_Able_To_Select_DropDown@7e9a5fbe]" name="TC001" duration-ms="35970" started-at="2021-08-28T10:34:33Z" data-provider="masterDP" finished-at="2021-08-28T10:35:09Z">
+        <test-method status="PASS" signature="TC001(java.util.Hashtable)[pri:0, instance:com.ProjectName.ModuleName.TestScripts.TC004_Verify_User_Able_To_Select_DropDown@2f8f5f62]" name="TC001" duration-ms="95454" started-at="2021-09-04T09:57:46Z" data-provider="masterDP" finished-at="2021-09-04T09:59:21Z">
           <params>
             <param index="0">
               <value>
@@ -22,7 +22,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC001 -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ProjectName.ModuleName.TestScripts.TC004_Verify_User_Able_To_Select_DropDown@7e9a5fbe]" name="tearDown" is-config="true" duration-ms="0" started-at="2021-08-28T10:35:09Z" finished-at="2021-08-28T10:35:09Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.ProjectName.ModuleName.TestScripts.TC004_Verify_User_Able_To_Select_DropDown@2f8f5f62]" name="tearDown" is-config="true" duration-ms="0" started-at="2021-09-04T09:59:21Z" finished-at="2021-09-04T09:59:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

@@ -36,56 +36,39 @@ public class RegisterPage extends BasePage {
 	WebElement clickMe;
 	
 	
+	@FindBy(xpath = "//button[text()='Try it']")
+	WebElement tryIt;
+	
 	@FindBy(xpath = "//iframe[@id='iframeResult']")
 	WebElement iframeResult;
 	
 	
 	public RegisterPage open(String url) {
-
 		DriverManager.getDriver().navigate().to(url);
 		System.out.println("Page Opened");
-		return (RegisterPage) openPage(RegisterPage.class);
+		return (RegisterPage) openPage(RegisterPage.class);	
 	}
-
-	
-	
-	
+	@Override
+	protected void getPageScreenSot() {
+		aShot();
+	}	
 	public void m1() throws InterruptedException {
-		
-		selectByVisibleText(skills, "Adobe Photoshop", "skills");
-		
-		
-		
-		Thread.sleep(1000);
-		
+		selectByVisibleText(skills, "Adobe Photoshop", "skills");		
+		Thread.sleep(1000);		
 		clickElementByJavaScript(country);
 		Thread.sleep(1000);
 		type(countrySearch, "Ind", "India");
 		countrySearch.sendKeys(Keys.ENTER);
-		Thread.sleep(1000);
-		
-		
-		
-		clickElementByJavaScript(Languages);
-		
-		String value = "Dutch";
-		
-		WebElement element = driver.findElement(By.xpath("//a[text()='"+value+"']"));
-		
-		click(element, value);
-		
-		Thread.sleep(3000);
-		
-		selectUsingIndex(skills, 10, "skills");
-		
-		Thread.sleep(3000);
-		
-		
+		Thread.sleep(1000);	
+		clickElementByJavaScript(Languages);		
+		String value = "Dutch";		
+		WebElement element = driver.findElement(By.xpath("//a[text()='"+value+"']"));		
+		click(element, value);		
+		Thread.sleep(3000);		
+		selectUsingIndex(skills, 10, "skills");		
+		Thread.sleep(3000);		
 		selectUsingByValue(skills, "Certifications", "skills");
-	}
-	
-	
-	
+	}	
 	public void m2() throws InterruptedException {
 		Thread.sleep(5000);
 		moveToElement(insights);
@@ -96,20 +79,27 @@ public class RegisterPage extends BasePage {
 		System.out.println(x);
 		Thread.sleep(5000);
 		clickElementByJavaScript(surveys);
-	}
-	
-	
-	
-	public void m3() {
-		
+	}	
+	public void m3() {		
 		System.out.println(driver.findElements(By.xpath("//iframe")).size());
 		switchTOIframeByElement(iframeResult);
-		click(clickMe, "click Me");
-		
-		switchTodefaultContent();
-		
-		
+		click(clickMe, "click Me");		
+		switchTodefaultContent();		
 	}
+	
+	
+	public void m4() throws InterruptedException {		
+		System.out.println(driver.findElements(By.xpath("//iframe")).size());
+		switchTOIframeByElement(iframeResult);
+		click(tryIt, "try It");
+		
+		Thread.sleep(3000);
+		getAlertText();
+		getAlert();
+//		switchTodefaultContent();		
+	}
+	
+	
 	
 	
 }

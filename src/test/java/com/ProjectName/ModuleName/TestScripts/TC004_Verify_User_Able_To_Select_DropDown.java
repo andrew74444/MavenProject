@@ -23,7 +23,7 @@ public class TC004_Verify_User_Able_To_Select_DropDown extends BaseTest{
 	DataUtil.checkExecution("master", "TC001", data.get("Runmode"), excel);
 	openBrowser(data.get("browser"));
 	RegisterPage home = new RegisterPage().open(getTestsiteUrl());
-	home.m3();
+	home.m4();
 	
 	}
 	
