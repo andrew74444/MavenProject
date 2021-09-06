@@ -17,7 +17,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.ProjectName.ExtentListeners.ExtentListeners;
 import com.ProjectName.utilities.DriverManager;
@@ -32,11 +35,14 @@ import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 public abstract class BasePage<T> {
 
 	protected WebDriver driver;
+	
+	private long LOAD_TIMEOUT = 10;
 	private int AJAX_ELEMENT_TIMEOUT = 150;
+	public int expTime = 15;
 	public Logger log = Logger.getLogger(BasePage.class);
 	protected JavascriptExecutor exe;
 	protected Robot robot;
-	
+	protected WebDriverWait wait;	
 	
 	public BasePage() {
 		this.driver = DriverManager.getDriver();
@@ -53,9 +59,8 @@ public abstract class BasePage<T> {
 			AjaxElementLocatorFactory ajaxElemFactory = new AjaxElementLocatorFactory(driver, AJAX_ELEMENT_TIMEOUT);
 			page = PageFactory.initElements(driver, clazz);
 			PageFactory.initElements(ajaxElemFactory, page);
-			// ExpectedCondition pageLoadCondition = ((BasePage)
-			// page).getPageLoadCondition();
-			// waitForPageToLoad(pageLoadCondition);
+			ExpectedCondition pageLoadCondition = ((BasePage) page).getPageLoadCondition();
+			waitForPageToLoad(pageLoadCondition);
 			 ((BasePage) page).getPageScreenSot();
 		} catch (NoSuchElementException e) {
 			/*
@@ -69,7 +74,7 @@ public abstract class BasePage<T> {
 
 	protected abstract void getPageScreenSot();
 	
-	
+	protected abstract ExpectedCondition getPageLoadCondition();
 	
 	public String screenshotName;
 	
@@ -379,12 +384,22 @@ public abstract class BasePage<T> {
 			}
 		}
 	
+		private void waitForPageToLoad(ExpectedCondition pageLoadCondition) {
+			wait = new WebDriverWait(driver, LOAD_TIMEOUT);
+			wait.until(pageLoadCondition);
+		}
 	
 	
 	
 	
-	
-	
+		protected void waitForElementToPresent(WebElement element) {
+			wait = new WebDriverWait(driver, LOAD_TIMEOUT);
+			log.info("waiting for :" + element.toString() + " for :" + expTime + " seconds");		
+			wait.until(ExpectedConditions.visibilityOf(element));	
+			
+			
+		}
+
 	
 	
 	

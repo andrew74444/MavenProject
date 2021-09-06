@@ -2,6 +2,7 @@ package com.ProjectName.Pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 
 import com.ProjectName.utilities.DriverManager;
 
@@ -34,6 +35,12 @@ public class HomePage extends BasePage{
 	@Override
 	protected void getPageScreenSot() {
 		aShot();
+	}
+
+	@Override
+	protected ExpectedCondition getPageLoadCondition() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	

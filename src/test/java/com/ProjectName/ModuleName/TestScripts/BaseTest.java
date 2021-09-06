@@ -120,6 +120,7 @@ public class BaseTest {
 		log.info("Driver Initialized !!!");
 		DriverManager.getDriver().manage().window().maximize();
 		DriverManager.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		DriverManager.getDriver().manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 			
 		setTestsiteUrl(Config.getProperty("testsiteurl"));
 		JavascriptExecutor js = (JavascriptExecutor)driver;

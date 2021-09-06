@@ -1,5 +1,8 @@
-INFO    2021-09-04 10:52:55,585 [main] com.ProjectName.ModuleName.TestScripts.BaseTest  - Config properties file loaded
-INFO    2021-09-04 10:53:08,405 [main] io.github.bonigarcia.wdm.WebDriverManager  - Using chromedriver 92.0.4515.107 (since Google Chrome 92 is installed in your machine)
-INFO    2021-09-04 10:53:10,062 [main] io.github.bonigarcia.wdm.WebDriverManager  - Exporting webdriver.chrome.driver as C:\Users\Sasi\.m2\repository\webdriver\chromedriver\win32\92.0.4515.107\chromedriver.exe
-INFO    2021-09-04 10:54:48,088 [main] com.ProjectName.ModuleName.TestScripts.BaseTest  - Driver Initialized !!!
-INFO    2021-09-04 10:59:07,380 [main] com.ProjectName.ModuleName.TestScripts.BaseTest  - Test Execution Completed !!!
+INFO    2021-09-05 10:11:03,961 [main] com.ProjectName.ModuleName.TestScripts.BaseTest  - Config properties file loaded
+INFO    2021-09-05 10:11:06,660 [main] io.github.bonigarcia.wdm.WebDriverManager  - Using chromedriver 92.0.4515.107 (since Google Chrome 92 is installed in your machine)
+INFO    2021-09-05 10:11:06,687 [main] io.github.bonigarcia.wdm.WebDriverManager  - Exporting webdriver.chrome.driver as C:\Users\Sasi\.m2\repository\webdriver\chromedriver\win32\92.0.4515.107\chromedriver.exe
+INFO    2021-09-05 10:11:10,091 [main] com.ProjectName.ModuleName.TestScripts.BaseTest  - Driver Initialized !!!
+INFO    2021-09-05 10:11:21,033 [main] com.ProjectName.Pages.BasePage  - scrolling up vertically...
+INFO    2021-09-05 10:11:26,096 [main] com.ProjectName.Pages.BasePage  - Clicking on click
+INFO    2021-09-05 10:11:26,466 [main] com.ProjectName.Pages.BasePage  - Clicked on click
+INFO    2021-09-05 10:11:34,970 [main] com.ProjectName.ModuleName.TestScripts.BaseTest  - Test Execution Completed !!!

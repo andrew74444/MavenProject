@@ -15,6 +15,7 @@ import com.ProjectName.utilities.ExcelReader;
 
 public class TC004_Verify_User_Able_To_Select_DropDown extends BaseTest{
 
+	long startTime;
 	
 	@Test(dataProviderClass=DataProviders.class,dataProvider="masterDP")
 	public void TC001 (Hashtable<String,String> data) throws Exception {		
@@ -23,13 +24,15 @@ public class TC004_Verify_User_Able_To_Select_DropDown extends BaseTest{
 	DataUtil.checkExecution("master", "TC001", data.get("Runmode"), excel);
 	openBrowser(data.get("browser"));
 	RegisterPage home = new RegisterPage().open(getTestsiteUrl());
-	home.m5();
+	
+	
+	
+	home.m6();
 	
 	}
 	
 	@AfterMethod
 	public void tearDown() {
-		
 		logInfo("Login Test Completed");
 		
 		quit();

@@ -3,11 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="Parameterization.ParameterizationWithTestNgXML">
+      <class name="Parameterization.Wait">
         <methods>
+          <include name="tearDown"/>
           <include name="test"/>
         </methods>
-      </class> <!-- Parameterization.ParameterizationWithTestNgXML -->
+      </class> <!-- Parameterization.Wait -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

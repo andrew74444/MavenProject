@@ -1,0 +1,281 @@
+
+Core Java essentials for Selenium:
+
+Classes and Objects,
+Methods - User defined, and Predefined, Static and Non Static Methods,
+If and Else Statements,
+Loops - While Loop, Do While Loop, For Loop, Nested Loops, Break and Continue statements
+Arrays
+Exception Handling
+Package and Access Modifiers
+OOPS - Inheritance, Polymorphism (Overloading & Over riding), Encapsulation, Abstract Classes. interfaces
+Reading Properties files
+Reading & Writing Text Files
+Reading & Writing Excel Files Using Apache POI
+Collections - Wrapper Classes, ArrayList, HashSet & HashMap
+Reflection API
+ 
+
+Selenium WebDriver
+Reading data from excel files
+Browser configurations
+logger
+Locators
+Extent report
+tables
+Handling drop downs
+Using javaScript
+Handling Iframes
+
+
+1. 
+Handling alerts
+Keyboard Events
+Robot
+Capture screenshot
+
+2.
+Handling Synchronizations, 
+Handling multiple windows,
+
+
+3.
+Auto It, Sikuli,
+
+4.
+Selenium Grid, 
+Maven
+
+5.
+Git, Jenkins
+creating batch file
+Database connections
+
+
+6.
+BDD - Framework
+
+
+
+TestNg: Configuring TestNg Plugin, Creating Test Cases, Adding Asserttions and Reporting Failures, SoftAssertions and Reporting Multiple Failures, Creating Test Dependencies, Creating Test Suite (xml file), Managing Multiple Test Suites, Test Groups - Include and Exclude, TestNg Listeners, Forcefully Skipping a Test Cases, Adding Before and After Suite annotations, TestNg Report and adding Screenshot to report when Test failure,  Parameterization through DataProviders, TestNg Parameterization Excel, TestNg Parameterization Excel With Hashtable, Handling Multiple Data Providers, Reading Parameters from TestNg.xml, Running parallel test using testng.xml, Running parallel test using dataprovider, InvocationCount and ThreadPoolSize
+
+ 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
+
+ Frameworks
+
+TDD - Framework: POM Model with Page factories Framework and Generating Extent Report with Parallel execution on Local System, On Selenium Grid
+
+
+Locators
+i. ID
+ii. Name
+iii. Class Name
+iv. Tag Name
+v. Link Text
+vi. Partial Link Text
+vii. CSS Selector
+viii. XPath
+
+
+driver.findElement(By.name("q")).click()
+driver.findElement(By.ID("")).click()
+
+
+Absolute xpath
+
+
+Relative xpath
+
+
+Basic Syntax: //TagName[@attribute='value']
+
+if attribut is available to other elements, then we can concatenate with other attribute within the same element
+
+//TagName[@attribute='value'] [@attribute='value']
+
+//TagName[@attribute='value' and @attribute='value'] // both should be true
+
+//TagName[@attribute='value' or  @attribute='value'] atleast one should be true
+
+by index for same attributes
+
+//TagName[starts-with(@attribute='value')]
+
+//TagName[conatins(@attribute='partialvalue')
+
+ 
+
+Parent-child
+
+Siblings - 1 following sibling and Preceeding sibling
+
+To get parent
+
+1. //TagName[@attribute='value']/..
+
+2. //TagName[@attribute='value']/parent::TagName
+
+To get child
+
+//TagName[@attribute='value']/tagName
+
+ 
+
+siblings
+
+1. Proceeding sibling//TagName[@attribute='value']/preceding-sibling::TagName
+
+2. following sibling//TagName[@attribute='value']/following-sibling::TagName
+
+identifying by text
+
+1. //TagName[conatins(text(),'partialValue')]
+
+2. //TagName[text()='TextOfTheElement']
+
+ 
+
+CSS
+
+Syntax: TagName[attribute='value']
+
+Concatenate
+
+TagName[attribute='value'] [attribute='value']
+
+TagName[attribute^='value'] - starts with
+
+TagName[attribute$='alue'] - ends with 
+
+TagName[attribute*='lu'] contains
+
+to Form Css with ID, In CSS id starts with #Value
+
+TagName#Value
+
+With Class is .Value, is space is available replace with dot, then CSS will be formed
+
+TagName.Value
+
+TagName#Value.Value
+
+TagName#Value.Value [attribute='value']
+
+Hierarchy
+
+TagName.value>TagName>TagName:first-child
+
+TagName.value>TagName>TagName:last-child
+
+TagName.value>TagName>TagName:nth-child(num)
+
+TagName[attribute='value']>TagName>TagName: nth-child(num)
+
+ 
+
+ 
+
+Disadvantages:
+
+1. We can forward only, I.e., from Parent to child only but in Xpath we can move up and down(Parent to child and Child to Parent)
+
+2.  In Case of Xpath, we can locate the element with Text, but in CSS we cannot locate with text
+
+
+
+
+
+
+
+
+
+What is Selenium ?
+
+Its Open source automation Framework/Set of lib/ Project / API for web based application testing only
+
+
+
+Web Based - Selenium, QTP/UFT, Katalon, Cypress, protactor, Tosca
+Desktop - QTP/UFT, UIpath, AutoIT, Sikuli
+Mobile- Appium,Perfecto
+API- Webservies, PSTMAN, SOAP UI, Rest Assured...etc
+Database- SQL, MySql, Oracle,Mongo DB...etc
+
+
+Selenium IDE, RC, Webdriver, Grid
+
+Selenium 1 - IDE, +RC+Gird 2004 - Jasaon huggin - Thoughtworks
+Selenium 2 - IDE+ RC +  Webdriver 2.53+ Grid - Simon stewart - Google 2011
+Selenium 3 IDE+Webdriver+grid - 3.141.59
+Selenium 4 IDE+Webdriver+grid
+
+Multi browsers - chrome,FF,Opera,Safari,IE..etc
+Multi Lag - java,PHP,C#,Python,c, Ruby,JS...etc
+Multi platform - Win, Mac,Linux,IOS,Andriod..etc
+
+GITlbs/GitHub
+Maven
+Jenkins/baboo 
+Junit/TestNG/Cucumber BDD
+Extent Report
+Log4j
+POI 
+MAIL API
+
+
+
+
+
+
+Core Java essentials for Selenium:
+
+Classes and Objects,
+
+Methods - User defined, and Predefined, Static and Non Static Methods,
+
+If and Else Statements,
+
+Loops - While Loop, Do While Loop, For Loop, Nested Loops, Break and Continue statements
+
+Arrays
+
+Exception Handling
+
+Package and Access Modifiers
+
+OOPS - Inheritance, Polymorphism (Overloading & Over riding), Encapsulation, Abstract Classes. interfaces
+
+Reading Properties files
+
+Reading & Writing Text Files
+
+Reading & Writing Excel Files Using Apache POI
+
+Collections - Wrapper Classes, ArrayList, HashSet & HashMap, HasTable
+
+Reflection API
+
+ 
+
+Selenium WebDriver
+
+Locators, Handling alerts, Database connections, Reading data from excel files, Note pad files, Handling Iframes, Using javaScript, logger, Keyboard Events, Capture screenshot, Handling drop downs, Handling Synchronizations, Handling multiple windows, Extent report, Browser configurations, Auto It, Sikuli, Robot, Maven, Selenium Grid, creating batch file, Git, Jenkins
+
+TestNg: Configuring TestNg Plugin, Creating Test Cases, Adding Asserttions and Reporting Failures, SoftAssertions and Reporting Multiple Failures, Creating Test Dependencies, Creating Test Suite (xml file), Managing Multiple Test Suites, Test Groups - Include and Exclude, TestNg Listeners, Forcefully Skipping a Test Cases, Adding Before and After Suite annotations, TestNg Report and adding Screenshot to report when Test failure,  Parameterization through DataProviders, TestNg Parameterization Excel, TestNg Parameterization Excel With Hashtable, Handling Multiple Data Providers, Reading Parameters from TestNg.xml, Running parallel test using testng.xml, Running parallel test using dataprovider, InvocationCount and ThreadPoolSize
+
+ 
+Frameworks
+
+TDD - Framework: POM Model with Page factories Framework and Generating Extent Report with Parallel execution on Local System, On Selenium Grid
+
+And BDD cucumber framework
+
+
+
+
+
+
+
+
+
+
