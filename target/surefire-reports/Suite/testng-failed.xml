@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="com.ProjectName.ExtentListeners.ExtentListeners"/>
+  </listeners>
+  <test name="Test1(failed)">
+    <classes>
+      <class name="com.ProjectName.ModuleName.TestScripts.TC004_Verify_User_Able_To_Select_DropDown">
+        <methods>
+          <include name="setUpFramework"/>
+          <include name="tearDown"/>
+          <include name="TC001" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.ProjectName.ModuleName.TestScripts.TC004_Verify_User_Able_To_Select_DropDown -->
+    </classes>
+  </test> <!-- Test1(failed) -->
+</suite> <!-- Failed suite [Suite] -->

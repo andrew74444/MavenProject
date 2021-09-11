@@ -25,9 +25,9 @@ public class Sikuli {
 		 
 		
 		 
-		Pattern image1 = new Pattern("C:\\Users\\Sasi\\Desktop\\Choose_File.png");
+		Pattern ChooseFile = new Pattern("C:\\Users\\Sasi\\Desktop\\Choose_File.png");
 		 
-		Pattern image2 = new Pattern("C:\\Users\\Sasi\\Desktop\\Address.PNG");
+		Pattern address = new Pattern("C:\\Users\\Sasi\\Desktop\\Address.PNG");
 		 
 		
 		Thread.sleep(10000);
@@ -42,9 +42,9 @@ public class Sikuli {
 		
 		
 		
-		screen.type(image2, "Vinod");
+		screen.type(address, "India");
 		
-		screen.click(image1);
+		screen.click(ChooseFile);
 		
 		Thread.sleep(5000);
 		
@@ -52,10 +52,7 @@ public class Sikuli {
 	
 	@AfterMethod
 	public void tearDown() {
-		long endTime = System.currentTimeMillis();
 		
-		long timeTaken = endTime-startTime;
-		System.out.println("Total Time Taken is : " +timeTaken);
 		
 //		driver.close();
 		

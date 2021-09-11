@@ -12,6 +12,7 @@ public class DriverFactory {
 		return gridPath;
 	}
 	public static void setGridPath(String gridPath) {
+		System.out.println(gridPath);
 		DriverFactory.gridPath = gridPath;
 	}
 	private static boolean isRemote;
