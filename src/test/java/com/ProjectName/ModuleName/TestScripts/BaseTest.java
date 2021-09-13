@@ -81,6 +81,7 @@ public class BaseTest {
 		configureLogging();
 		
 		
+		
 		DriverFactory.setGridPath("http://localhost:4444/wd/hub");
 		DriverFactory.setConfigPropertyFilePath(
 				System.getProperty("user.dir") + "//src//test//resources//properties//Config.properties");
