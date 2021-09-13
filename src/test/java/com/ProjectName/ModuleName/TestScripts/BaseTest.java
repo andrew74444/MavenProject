@@ -46,7 +46,7 @@ public class BaseTest {
 	private String defaultUserName;
 	private String defaultPassword;
 	private String testsiteUrl;
-	public boolean grid = false;
+	public boolean grid = true;
 	
 	
 	public String getTestsiteUrl() {

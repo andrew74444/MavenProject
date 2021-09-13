@@ -1,6 +1,6 @@
-INFO    2021-09-11 10:31:14,439 [main] com.ProjectName.ModuleName.TestScripts.BaseTest  - Config properties file loaded
-INFO    2021-09-11 10:31:55,591 [main] com.ProjectName.ModuleName.TestScripts.BaseTest  - Driver Initialized !!!
-INFO    2021-09-11 10:32:37,527 [main] com.ProjectName.Pages.BasePage  - scrolling up vertically...
-INFO    2021-09-11 10:32:42,679 [main] com.ProjectName.Pages.BasePage  - Clicking on click
-INFO    2021-09-11 10:32:48,744 [main] com.ProjectName.Pages.BasePage  - Clicked on click
-INFO    2021-09-11 10:33:10,785 [main] com.ProjectName.ModuleName.TestScripts.BaseTest  - Test Execution Completed !!!
+INFO    2021-09-13 09:23:35,492 [main] com.ProjectName.ModuleName.TestScripts.BaseTest  - Config properties file loaded
+INFO    2021-09-13 09:24:08,518 [main] com.ProjectName.ModuleName.TestScripts.BaseTest  - Driver Initialized !!!
+INFO    2021-09-13 09:24:51,245 [main] com.ProjectName.Pages.BasePage  - scrolling up vertically...
+INFO    2021-09-13 09:24:56,375 [main] com.ProjectName.Pages.BasePage  - Clicking on click
+INFO    2021-09-13 09:24:59,608 [main] com.ProjectName.Pages.BasePage  - Clicked on click
+INFO    2021-09-13 09:25:12,168 [main] com.ProjectName.ModuleName.TestScripts.BaseTest  - Test Execution Completed !!!
