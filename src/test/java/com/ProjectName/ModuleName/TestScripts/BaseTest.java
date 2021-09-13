@@ -49,6 +49,7 @@ public class BaseTest {
 	public boolean grid = true;
 	
 	
+	
 	public String getTestsiteUrl() {
 		return testsiteUrl;
 	}
