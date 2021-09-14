@@ -1,3 +1,8 @@
-INFO    2021-09-13 09:36:03,459 [main] com.ProjectName.ModuleName.TestScripts.BaseTest  - Config properties file loaded
-INFO    2021-09-13 09:36:55,248 [main] com.ProjectName.ModuleName.TestScripts.BaseTest  - Driver Initialized !!!
-INFO    2021-09-13 09:37:35,545 [main] com.ProjectName.ModuleName.TestScripts.BaseTest  - Test Execution Completed !!!
+INFO    2021-09-14 10:19:23,547 [main] com.ProjectName.ModuleName.TestScripts.BaseTest  - Config properties file loaded
+INFO    2021-09-14 10:19:27,824 [main] io.github.bonigarcia.wdm.WebDriverManager  - Using chromedriver 93.0.4577.63 (since Google Chrome 93 is installed in your machine)
+INFO    2021-09-14 10:19:27,860 [main] io.github.bonigarcia.wdm.WebDriverManager  - Exporting webdriver.chrome.driver as C:\Users\Sasi\.m2\repository\webdriver\chromedriver\win32\93.0.4577.63\chromedriver.exe
+INFO    2021-09-14 10:20:11,521 [main] com.ProjectName.ModuleName.TestScripts.BaseTest  - Driver Initialized !!!
+INFO    2021-09-14 10:20:44,245 [main] com.ProjectName.Pages.BasePage  - scrolling up vertically...
+INFO    2021-09-14 10:20:49,304 [main] com.ProjectName.Pages.BasePage  - Clicking on click
+INFO    2021-09-14 10:20:51,656 [main] com.ProjectName.Pages.BasePage  - Clicked on click
+INFO    2021-09-14 10:21:21,221 [main] com.ProjectName.ModuleName.TestScripts.BaseTest  - Test Execution Completed !!!
