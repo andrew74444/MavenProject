@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite">
+<suite name="Suite" parallel="classes" thread-count="5">
 
 <listeners>
 		<listener		
@@ -14,6 +14,7 @@
 
   <classes>
   <class name="com.ProjectName.ModuleName.TestScripts.TC004_Verify_User_Able_To_Select_DropDown"/>
+  <class name="com.ProjectName.ModuleName.TestScripts.TC004_Verify_User_Able_To_Select_DropDown2"/>
   </classes>  
   
   </test> <!-- Test -->
